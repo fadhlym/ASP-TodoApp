@@ -15,7 +15,7 @@ public class HomeController : Controller
         var filters = new Filters(id);
         ViewBag.Filters = filters;
 
-        ViewBag.Category = context.Categories.ToList();
+        ViewBag.Categories = context.Categories.ToList();
         ViewBag.Statuses = context.Statuses.ToList();
         ViewBag.DueFilters = Filters.DueFilterValues;
 
