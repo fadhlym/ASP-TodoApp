@@ -39,7 +39,7 @@ Pull Changes from Remote
 To pull the latest changes from the remote repository:
 Click the Pull button in the Git Changes window.
 
-![App Screenshot](images/app-screenshot.png)
+![App Screenshot](images/app-screen.png)
 
 Acknowledgments
 ASP.NET Core
