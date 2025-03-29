@@ -2,11 +2,11 @@
 
 namespace TodoApp.Models
 {
-    public class TodoContext : DbContext
+    public class ToDoContext : DbContext
     {
-        public TodoContext(DbContextOptions<TodoContext> options) : base(options) { }
+        public ToDoContext(DbContextOptions<ToDoContext> options) : base(options) { }
 
-        public DbSet<Todo> Todos { get; set; }
+        public DbSet<ToDo> Todos { get; set; }
 
         public DbSet<Category> Categories { get; set; }
 

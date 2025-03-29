@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace TodoApp.Models
 {
-    public class Todo
+    public class ToDo
     {
         public int Id { get; set; }
 

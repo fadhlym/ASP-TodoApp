@@ -6,9 +6,9 @@ namespace TodoApp.Controllers;
 
 public class HomeController : Controller
 {
-    private TodoContext context;
+    private ToDoContext context;
 
-    public HomeController(TodoContext ctx) => context = ctx;
+    public HomeController(ToDoContext ctx) => context = ctx;
 
     public IActionResult Index(string id)
     {
@@ -19,7 +19,7 @@ public class HomeController : Controller
         ViewBag.Statuses = context.Statuses.ToList();
         ViewBag.DueFilters = Filters.DueFilterValues;
 
-        IQueryable<Todo> query = context.Todos
+        IQueryable<ToDo> query = context.Todos
             .Include(t => t.Category)
             .Include(t => t.Status);
 
@@ -57,15 +57,15 @@ public class HomeController : Controller
     [HttpGet]
     public IActionResult Add()
     {
-        ViewBag.Category = context.Categories.ToList();
-        ViewBag.Status = context.Statuses.ToList();
-        var task = new Todo { StatusId = "open" };
+        ViewBag.Categories = context.Categories.ToList();
+        ViewBag.Statuses = context.Statuses.ToList();
+        var task = new ToDo { StatusId = "open" };
 
         return View(task);
     }
 
     [HttpPost]
-    public IActionResult Add(Todo task)
+    public IActionResult Add(ToDo task)
     {
         if (ModelState.IsValid)
         {
@@ -75,8 +75,8 @@ public class HomeController : Controller
         }
         else
         {
-            ViewBag.Category = context.Categories.ToList();
-            ViewBag.Status = context.Statuses.ToList();
+            ViewBag.Categories = context.Categories.ToList();
+            ViewBag.Statuses = context.Statuses.ToList();
             return View(task);
         }
     }
@@ -89,7 +89,7 @@ public class HomeController : Controller
     }
 
     [HttpPost]
-    public IActionResult MarkComplete([FromRoute]string id, Todo selected)
+    public IActionResult MarkComplete([FromRoute]string id, ToDo selected)
     {
         selected = context.Todos.Find(selected.Id)!;
 

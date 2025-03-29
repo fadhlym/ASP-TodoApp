@@ -11,7 +11,7 @@ using TodoApp.Models;
 
 namespace TodoApp.Migrations
 {
-    [DbContext(typeof(TodoContext))]
+    [DbContext(typeof(ToDoContext))]
     [Migration("20250324070311_initial")]
     partial class initial
     {

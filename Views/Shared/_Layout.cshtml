@@ -4,21 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Tasks</title>
-    <script type="importmap"></script>
+
+    <!-- Importing necessary stylesheets -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/TodoApp.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <div class="container">
-        <header class="bg-primary text-white text-center">
-            <h1 class="m-3 p-3">My Tasks</h1>
+    <!-- Main Container -->
+    <div class="container-fluid">
+        <!-- Header -->
+        <header class="bg-primary text-white text-center py-5 mb-4">
+            <h1 class="display-4">My Tasks</h1>
+            <p class="lead">Manage your tasks efficiently and effectively</p>
         </header>
+
+        <!-- Main Content -->
         <main>
             @RenderBody()
         </main>
+
+        <!-- Optional Footer (if needed) -->
+        <footer class="bg-dark text-white text-center py-3 mt-5">
+            <p>&copy; 2025 Todo App. All rights reserved.</p>
+        </footer>
     </div>
 
+    <!-- Scripts -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
