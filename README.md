@@ -1,3 +1,5 @@
+![App Screenshot](images/app-screen.png)
+
 ToDoApp
 This project is a Simple Task Management Application that allows users to create, update, and manage tasks efficiently. It uses ASP.NET Core MVC and Git for version control, and can be run locally or deployed to a server for access.
 
@@ -38,8 +40,6 @@ After committing, click the Push button in the Git Changes window to push your c
 Pull Changes from Remote
 To pull the latest changes from the remote repository:
 Click the Pull button in the Git Changes window.
-
-![App Screenshot](images/app-screen.png)
 
 Acknowledgments
 ASP.NET Core
