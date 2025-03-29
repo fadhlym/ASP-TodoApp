@@ -39,17 +39,7 @@ Pull Changes from Remote
 To pull the latest changes from the remote repository:
 Click the Pull button in the Git Changes window.
 
-Folder Structure
-bash
-Copy
-/ProjectRoot
-├── /Controllers      # Contains controllers for handling requests and responses
-├── /Models           # Contains classes representing the application's data models
-├── /Views            # Contains view files (UI)
-├── /wwwroot          # Contains static files (CSS, JS, Images, etc.)
-├── /Migrations       # Contains database migration files (if applicable)
-├── appsettings.json  # Configuration file for application settings
-└── Startup.cs        # Configuration file for middleware, services, and routes
+![App Screenshot](images/app-screenshot.png)
 
 Acknowledgments
 ASP.NET Core
